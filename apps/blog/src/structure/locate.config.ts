@@ -11,11 +11,11 @@
 // That's all it takes, in the usual case for Presentation editable pages
 
 export const locates = [
-  { type: 'post', key: 'title', path: '/postsa' },
+  { type: 'post', key: 'title', path: '/posts' },
 ]
 
 // If with care to what follows, yyou also want to have an 'all docs' listing
-// item for the docy type, showing up in the dropdown, then you can add two fields
+// item for the doc type, showing up in the dropdown, then you can add two fields
 // to its particular object:
 //    - allPath as the url path introducing the document list
 //    - label as a text label for this item

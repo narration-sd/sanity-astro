@@ -4,7 +4,7 @@ import SanityImage from "./SanityImage.astro";
 const { id, type, path } = Astro.props
 
 const baseUrl = import.meta.env.PUBLIC_SANITY_STUDIO_PREVIEW_URL +
-  import.meta.env.PUBLIC_SANITY_STUDIO_CALL_PATH
+  import.meta.env.PUBLIC_SANITY_STUDIO_BASE_PATH
 
 const attr = (path:string) => createDataAttribute({
   id: id,

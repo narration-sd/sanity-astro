@@ -1,14 +1,20 @@
 ---
 import { sanityClient } from "sanity:client";
-import Layout from "../../layouts/LayoutA.astro";
+import Layout from "../../layouts/Layout.astro";
 import PortableText from "../../components/PortableText.astro";
 import SanityImage from "../../components/SanityImage.astro";
 import Outline from "../../components/Outline.astro"
 import { formatDate } from "../../utils";
 
+// n.b. for future static or hybrid use, with published-only
+// page query filtering, which can also be dynamic to keep
+// presentation editing available with one source.
 // export const prerender = false;
 // export async function getStaticPaths() {
-//   const posts = await getPosts();
+//   const posts = await sanityClient.fetch(
+//     `*[_type == "post"][] {
+//     ...
+//   }`)
 //   return posts.map((post) => ({
 //     params: { slug: post.slug.current },
 //   }));
@@ -23,7 +29,6 @@ const post = await sanityClient.fetch(
     slug: Astro.params.slug,
   }
 )
-console.log('client: ' + JSON.stringify(sanityClient.config(), null, 2))
 ---
 <Layout title={post.title} live>
 
@@ -52,9 +57,8 @@ console.log('client: ' + JSON.stringify(sanityClient.config(), null, 2))
   </section>
 </Layout>
 
-  <!--<style>-->
-  <style is:inline>
-    .post {
+<style is:inline>
+  .post {
     width: 100%;
     margin: var(--space-1) 0 var(--space-4);
 

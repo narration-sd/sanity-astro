@@ -10,25 +10,30 @@ const env = {
     'PUBLIC_SANITY_', // can add others
   ])}
 
-console.log ('projectId: ' + env.PUBLIC_SANITY_PROJECT_ID)
-console.log ('dataset: ' + env.PUBLIC_SANITY_DATASET)
-console.log ('basepath: ' + env.PUBLIC_SANITY_STUDIO_CALL_PATH)
+// 'sanity' check...
+if (!(env.PUBLIC_SANITY_PROJECT_ID && env.PUBLIC_SANITY_DATASET
+  && env.PUBLIC_SANITY_VIEWER_TOKEN && env.PUBLIC_SANITY_API_VERSION)) {
+  throw new Error ('You have to fill in all your /.env environmental variables, ' +
+      'from the example in /.env_example, before you can run this site...'
+  )
+}
+
 // https://astro.build/config
 export default defineConfig({
   integrations: [
     sanity({
       projectId: env.PUBLIC_SANITY_PROJECT_ID,
       dataset: env.PUBLIC_SANITY_DATASET,
-      apiVersion: '2024-05-05',
+      apiVersion: env.PUBLIC_SANITY_API_VERSION,
       useCdn: false,
       perspective: 'previewDrafts',
       token: env.PUBLIC_SANITY_VIEWER_TOKEN,
       stega: {
         enabled:true,
         studioUrl: env.PUBLIC_SANITY_STUDIO_PREVIEW_URL
-            + env. PUBLIC_SANITY_STUDIO_CALL_PATH // '/admin',
+            + env. PUBLIC_SANITY_STUDIO_BASE_PATH,
       },
-      studioBasePath: env.PUBLIC_SANITY_STUDIO_CALL_PATH,
+      studioBasePath: env.PUBLIC_SANITY_STUDIO_BASE_PATH,
     }),
     react(),
   ],

@@ -8,10 +8,8 @@ interface Props {
 }
 
 const { title, live } = Astro.props;
-console.log('live: ' + (live ? 'yes' : 'no'))
-const visualEditingEnabled = import.meta.env.PUBLIC_SANITY_VISUAL_EDITING == 'true'
-console.log('vis-ed: ' + (visualEditingEnabled ? 'yes' : 'no'))
-
+const visualEditingEnabled
+	= import.meta.env.PUBLIC_SANITY_VISUAL_EDITING == 'true'
 ---
 
 <!DOCTYPE html>
