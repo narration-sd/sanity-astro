@@ -9,7 +9,7 @@ interface Props {
 
 const { title, live } = Astro.props;
 const visualEditingEnabled
-	= import.meta.env.PUBLIC_SANITY_VISUAL_EDITING == 'true'
+	= (import.meta.env.PUBLIC_SANITY_VISUAL_EDITING === 'true')
 ---
 
 <!DOCTYPE html>
