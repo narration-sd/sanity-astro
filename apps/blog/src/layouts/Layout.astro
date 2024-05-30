@@ -38,7 +38,7 @@ const visualEditingEnabled
 
 		<title>{title}</title>
 	</head>
-	<body>
+	<body id="layout">
 		<div class="container">
 			<!--<NewsBar client:only="react" />-->
 			<header class="header">
@@ -54,6 +54,13 @@ const visualEditingEnabled
 		</div>
 		{ live && <VisualEditing enabled={visualEditingEnabled} zIndex={1000} /> }
 	</body>
+	<script>
+		setTimeout(function() {
+			// this anti-fouc arrangement smooths scrolliing, also prevents skips
+			document.getElementById(
+				'layout').style.visibility = 'visible';
+		}, 500)
+	</script>
 </html>
 
 <style>
@@ -189,6 +196,10 @@ const visualEditingEnabled
 		background-color: var(--white);
 		font-family: var(--font-family-sans), var(--font-family-serif), sans-serif;
 		text-size-adjust: 100%;
+	}
+
+	#layout {
+		visibility: hidden; /* n.b. this w/script is flicker/fouc control */
 	}
 
 	body {

@@ -1,4 +1,4 @@
-import sanity from "@sanity/astro";
+import sanityIntegration from "@sanity/astro";
 import { defineConfig } from "astro/config";
 import vercel from "@astrojs/vercel/serverless";
 import react from "@astrojs/react";
@@ -21,7 +21,7 @@ if (!(env.PUBLIC_SANITY_PROJECT_ID && env.PUBLIC_SANITY_DATASET
 // https://astro.build/config
 export default defineConfig({
   integrations: [
-    sanity({
+    sanityIntegration({
       projectId: env.PUBLIC_SANITY_PROJECT_ID,
       dataset: env.PUBLIC_SANITY_DATASET,
       apiVersion: env.PUBLIC_SANITY_API_VERSION,
@@ -31,7 +31,7 @@ export default defineConfig({
       stega: {
         enabled:true,
         studioUrl: env.PUBLIC_SANITY_STUDIO_PREVIEW_URL
-            + env. PUBLIC_SANITY_STUDIO_BASE_PATH,
+            + env.PUBLIC_SANITY_STUDIO_BASE_PATH,
       },
       studioBasePath: env.PUBLIC_SANITY_STUDIO_BASE_PATH,
     }),
