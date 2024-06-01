@@ -6,7 +6,7 @@ import {sanityClient} from "sanity:client"
 const builder = imageUrlBuilder(sanityClient)
 
 const {node} = Astro.props
-const { width = 960, height, shape, pt=true } = Astro.props
+const { width = 960, height = 720, shape, pt=true } = Astro.props
 
 const ptShape = pt ? 'pt__embed_image' : ''
 
@@ -30,9 +30,11 @@ try {
 } catch (error) {
   console.error(error)
 }
+
 ---
 
-{image && <img class:list={[ shape, ptShape ]} src={image.url()} alt={node.alt || ""} title={node.alt} />}
+{image && <img class:list={[ shape, ptShape ]} src={image.url()}
+     alt={node.altText || "image"} title={node.altText} />}
 
 <style>
   .img-fit {

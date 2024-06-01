@@ -56,10 +56,10 @@ export default defineType({
       },
     }),
     defineArrayMember({
-      type: "image",
-      options: {
-        hotspot: true,
-      },
+      type: "ptImage",
+      // options: {
+      //   hotspot: true,
+      // },
     }),
   ],
 });
