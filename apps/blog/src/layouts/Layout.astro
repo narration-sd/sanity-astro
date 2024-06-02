@@ -10,6 +10,10 @@ interface Props {
 const { title, live } = Astro.props;
 const visualEditingEnabled
 	= (import.meta.env.PUBLIC_SANITY_VISUAL_EDITING === 'true')
+
+// n.b. full render delay timeout can't be set from here, so env read
+// is in script, and we indicate its use here:
+globalThis.live = live
 ---
 
 <!DOCTYPE html>
@@ -21,7 +25,7 @@ const visualEditingEnabled
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 
-<!--		&lt;!&ndash; Google fonts &ndash;&gt;
+		<!-- Google fonts -->
 		<link
 			rel="preconnect"
 			href="https://fonts.googleapis.com"
@@ -34,7 +38,7 @@ const visualEditingEnabled
 		<link
 			href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500;700&family=Inter:wght@500;700;800&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap"
 			rel="stylesheet"
-		/>-->
+		/>
 
 		<title>{title}</title>
 	</head>
@@ -55,11 +59,18 @@ const visualEditingEnabled
 		{ live && <VisualEditing enabled={visualEditingEnabled} zIndex={1000} /> }
 	</body>
 	<script>
-		setTimeout(function() {
-			// this anti-fouc arrangement smooths scrolliing, also prevents skips
+		// this anti-fouc arrangement can help smoothness, prevent skips with
+		// large pages refresh, when in Presentation editing+++
+		if (globalThis.live) {
+			setTimeout(function() {
+				document.getElementById(
+					'layout').style.visibility = 'visible';
+			}, Number(import.meta.env.PUBLIC_SANITY_FULL_RENDER_DELAY ?? '1'))
+		} else {
 			document.getElementById(
 				'layout').style.visibility = 'visible';
-		}, 500)
+		}
+
 	</script>
 </html>
 

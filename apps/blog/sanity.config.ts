@@ -2,7 +2,7 @@ import { defineConfig } from "sanity";
 
 import { structureTool} from "sanity/structure";
 import { visionTool } from "@sanity/vision";
-import { presentationTool } from 'sanity/presentation'
+import { defineDocuments, presentationTool } from 'sanity/presentation'
 import { media } from 'sanity-plugin-media'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
@@ -29,7 +29,16 @@ export default defineConfig({
     presentationTool({
       previewUrl: SANITY_STUDIO_PREVIEW_URL,
       title: 'Presentation',
-      locate: locate,
+      resolve:  {
+        // *todo* apparently non-functional as yet
+        mainDocuments: defineDocuments([
+          {
+            route: '/posts/:slug',
+            filter: `_type == "post" && slug.current == $slug`,
+          },
+        ]),
+        locations: locate,
+      },
     }),
     media(),
     unsplashImageAsset(),
