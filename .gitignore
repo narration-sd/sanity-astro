@@ -32,6 +32,9 @@ yarn-error.log*
 # turbo
 .turbo
 
+# netlify
+.netlify/
+
 # vercel
 .vercel
 
