@@ -1,0 +1,45 @@
+---
+import imageUrlBuilder from "@sanity/image-url";
+import type { ImageUrlBuilder } from "@sanity/image-url/lib/types/builder";
+import {sanityClient} from "sanity:client"
+
+const builder = imageUrlBuilder(sanityClient)
+
+const {node} = Astro.props
+const { width = 960, height = 720, shape, pt=true } = Astro.props
+
+const ptShape = pt ? 'pt__embed_image' : ''
+
+let image: ImageUrlBuilder | undefined;
+
+// See https://www.sanity.io/docs/presenting-images for general documentation on
+// presenting images, and https://www.sanity.io/docs/image-url for specifics on
+// this builder API
+try {
+  image = node && node.asset && builder
+    .image(node)
+    .width(width)
+  if (image && height) {
+    image = image.height(height)
+  }
+  if (image) {
+    image
+      .fit('max')
+      .auto('format')
+  }
+} catch (error) {
+  console.error(error)
+}
+
+---
+
+{image && <img class:list={[ shape, ptShape ]} src={image.url()}
+     alt={node.altText || "image"} title={node.altText} />}
+
+<style>
+  .img-fit {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+</style>
