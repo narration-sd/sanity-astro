@@ -8,6 +8,7 @@
     "build:movies": "turbo run build --filter=movies...",
     "clean": "turbo run clean && rimraf .turbo && rimraf node_modules",
     "dev": "turbo run dev",
+    "dev:blog": "turbo run dev --filter=blog",
     "dev:example": "turbo run dev --filter=example",
     "dev:example-ssr": "turbo run dev --filter=example-ssr",
     "dev:movies": "turbo run dev --filter=movies",
