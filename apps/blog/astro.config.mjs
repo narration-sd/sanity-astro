@@ -1,6 +1,7 @@
 import sanityIntegration from "@sanity/astro";
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/serverless";
+// import vercel from "@astrojs/vercel/serverless";
+import netlify from '@astrojs/netlify';
 import react from "@astrojs/react";
 import { loadEnv } from 'vite'
 
@@ -39,7 +40,8 @@ export default defineConfig({
   ],
   vite: { resolve: { alias: { lodash : 'lodash-es' } } },
   output: "server",
-  adapter: vercel({
-    edgeMiddleware: true,
-  }),
+  adapter: netlify(),
+  // adapter: vercel({
+  //   edgeMiddleware: true,
+  // }),
 });
