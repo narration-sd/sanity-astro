@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "scripts": {
     "clean": "rimraf .turbo && rimraf .vercel && rimraf node_modules",
     "dev": "astro dev",
