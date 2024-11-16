@@ -37,6 +37,7 @@ export default defineConfig({
     }),
     react(),
   ],
+  vite: { resolve: { alias: { lodash : 'lodash-es' } } },
   output: "server",
   adapter: vercel({
     edgeMiddleware: true,
