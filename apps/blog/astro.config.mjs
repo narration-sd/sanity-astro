@@ -1,6 +1,6 @@
 import sanityIntegration from "@sanity/astro";
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/serverless";
+import node from '@astrojs/node';
 import react from "@astrojs/react";
 import { loadEnv } from 'vite'
 
@@ -39,7 +39,11 @@ export default defineConfig({
   ],
   vite: { resolve: { alias: { lodash : 'lodash-es' } } },
   output: "server",
-  adapter: vercel({
-    edgeMiddleware: true,
+  adapter: node({
+    mode: 'standalone'
   }),
 });
+
+// n.b. pnpm run build normally, then run the result,
+// using node dist/server/entry.mjs
+// this will operate normally -- but show the bug!
