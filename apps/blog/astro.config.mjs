@@ -31,8 +31,8 @@ export default defineConfig({
       token: env.PUBLIC_SANITY_VIEWER_TOKEN,
       stega: {
         enabled:true,
-        studioUrl: env.PUBLIC_SANITY_STUDIO_PREVIEW_URL
-            + env.PUBLIC_SANITY_STUDIO_BASE_PATH,
+        studioUrl: /*env.PUBLIC_SANITY_STUDIO_PREVIEW_URL
+            +*/ env.PUBLIC_SANITY_STUDIO_BASE_PATH,
       },
       studioBasePath: /*env.PUBLIC_SANITY_STUDIO_PREVIEW_URL +*/ env.PUBLIC_SANITY_STUDIO_BASE_PATH,
     }),
