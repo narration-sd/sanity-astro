@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "projectSettings": {
+    "framework": "astro",
+    "buildCommand": "cd apps/blog && pnpm build",
+    "outputDirectory": "apps/blog/dist"
+  }
+}
