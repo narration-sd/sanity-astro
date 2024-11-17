@@ -21,14 +21,28 @@ import { formatDate } from "../../utils";
 // }
 
 const { slug } = Astro.params
-
+const visualEditingEnabled = import.meta.env.PUBLIC_SANITY_VISUAL_EDITING
+const token = import.meta.env.PUBLIC_SANITY_VIEWER_TOKEN;
+const perspective = visualEditingEnabled ? "previewDrafts" : "published";
+console.log('visualEditingEnabled: ', visualEditingEnabled ? 'yes' : 'no');
+console.log('perspective: ', perspective)
+console.log('token: ', token)
 const post = await sanityClient.fetch(
   `*[_type == "post" && slug.current == $slug][0]  {
     ...,
   }`, {
     slug: Astro.params.slug,
+  },
+  {
+    // filterResponse: false,
+    perspective,
+    resultSourceMap: visualEditingEnabled ? "withKeyArraySelector" : false,
+    stega: visualEditingEnabled,
+    ...(visualEditingEnabled ? { token } : {}),
   }
 )
+// console.log('post: ', post)
+console.log('title: ', post.title)
 ---
 <Layout title={post.title} live>
 
