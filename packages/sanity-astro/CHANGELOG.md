@@ -5,6 +5,75 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.1](https://github.com/sanity-io/sanity-astro/compare/v3.2.0...v3.2.1) (2025-02-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sanity/visual-editing to ^2.13.1 ([#286](https://github.com/sanity-io/sanity-astro/issues/286)) ([df4639a](https://github.com/sanity-io/sanity-astro/commit/df4639a4df2e891c681f1a541b5bb551673e8f75))
+* **deps:** update dependency @sanity/visual-editing to ^2.13.2 ([#292](https://github.com/sanity-io/sanity-astro/issues/292)) ([77bb3c4](https://github.com/sanity-io/sanity-astro/commit/77bb3c48218781beae9e90ec3da76f8b17585f7d))
+* **deps:** update dependency sanity to ^3.75.0 ([#287](https://github.com/sanity-io/sanity-astro/issues/287)) ([305b696](https://github.com/sanity-io/sanity-astro/commit/305b696e4513d6a5f7cb5fc34f3c374424b2339f))
+
+## [3.2.0](https://github.com/sanity-io/sanity-astro/compare/v3.1.11...v3.2.0) (2025-01-31)
+
+
+### Features
+
+* support embedding studios without ssr ([#275](https://github.com/sanity-io/sanity-astro/issues/275)) ([b1dd953](https://github.com/sanity-io/sanity-astro/commit/b1dd9536a6d778f6898e76a438985c414087222f))
+
+## [3.1.11](https://github.com/sanity-io/sanity-astro/compare/v3.1.10...v3.1.11) (2025-01-29)
+
+
+### Bug Fixes
+
+* bump license year ([3b87490](https://github.com/sanity-io/sanity-astro/commit/3b87490bb250e5e1b0253e89d02c37b19d475e39))
+* **deps:** update dependency @sanity/client to ^6.27.2 ([#271](https://github.com/sanity-io/sanity-astro/issues/271)) ([5560c81](https://github.com/sanity-io/sanity-astro/commit/5560c816046058f51c6def4cb298d532ca12d9d3))
+* **deps:** update dependency @sanity/visual-editing to ^2.12.10 ([#270](https://github.com/sanity-io/sanity-astro/issues/270)) ([6cdd08c](https://github.com/sanity-io/sanity-astro/commit/6cdd08c2e923a404e995003b02be3eb61d7368df))
+* **deps:** update dependency sanity to ^3.72.1 ([#272](https://github.com/sanity-io/sanity-astro/issues/272)) ([d2b6890](https://github.com/sanity-io/sanity-astro/commit/d2b6890323cf5817397a3cbb1b87f5f437a773f5))
+* **deps:** update dependency type-fest to ^4.33.0 ([#246](https://github.com/sanity-io/sanity-astro/issues/246)) ([06985bb](https://github.com/sanity-io/sanity-astro/commit/06985bb10b174014efd63471e8bcafda323b8c8d))
+
+## [3.1.10](https://github.com/sanity-io/sanity-astro/compare/v3.1.9...v3.1.10) (2025-01-14)
+
+
+### Bug Fixes
+
+* bump visual editing to 2.12.2 to fix refresh connectivity ([#238](https://github.com/sanity-io/sanity-astro/issues/238)) ([3233c60](https://github.com/sanity-io/sanity-astro/commit/3233c60a1264c079a7f1973c809afe20cf39fbe9))
+
+## [3.1.9](https://github.com/sanity-io/sanity-astro/compare/v3.1.8...v3.1.9) (2024-12-18)
+
+
+### Bug Fixes
+
+* bump react peer ([#233](https://github.com/sanity-io/sanity-astro/issues/233)) ([debdfbe](https://github.com/sanity-io/sanity-astro/commit/debdfbe20f4f430abbb90028ccfca74d39aa500b))
+
+## [3.1.8](https://github.com/sanity-io/sanity-astro/compare/v3.1.7...v3.1.8) (2024-12-12)
+
+
+### Bug Fixes
+
+* **deps:** upgrade `@sanity/visual-editing` to `2.10.7` ([7af0441](https://github.com/sanity-io/sanity-astro/commit/7af0441f47b78359af165525dddd76053f96f633))
+
+## [3.1.7](https://github.com/sanity-io/sanity-astro/compare/v3.1.6...v3.1.7) (2024-12-12)
+
+
+### Bug Fixes
+
+* bump `sanity` and `@sanity/visual-editing` to `latest` ([#220](https://github.com/sanity-io/sanity-astro/issues/220)) ([a1274ea](https://github.com/sanity-io/sanity-astro/commit/a1274ea9e171d156d5b6bff7ab49a8fe299e30f1))
+
+## [3.1.6](https://github.com/sanity-io/sanity-astro/compare/v3.1.5...v3.1.6) (2024-08-29)
+
+
+### Bug Fixes
+
+* error out if studioBasePath looks like an absolute URL ([#211](https://github.com/sanity-io/sanity-astro/issues/211)) ([9dc8b72](https://github.com/sanity-io/sanity-astro/commit/9dc8b72792646c8d1f0f4af1e15bb3c3a9fa5e5a))
+
+## [3.1.5](https://github.com/sanity-io/sanity-astro/compare/v3.1.4...v3.1.5) (2024-08-27)
+
+
+### Bug Fixes
+
+* allow integration options to be undefined ([#213](https://github.com/sanity-io/sanity-astro/issues/213)) ([0e8924b](https://github.com/sanity-io/sanity-astro/commit/0e8924bcdf2097efebb0d20edadb5a7db9d59b9c))
+
 ## [3.1.4](https://github.com/sanity-io/sanity-astro/compare/v3.1.3...v3.1.4) (2024-06-19)
 
 
