@@ -19,5 +19,13 @@ export default defineConfig(() => {
         outDir: 'dist/types',
       }) as unknown as Plugin,
     ],
+    optimizeDeps: {
+      include: [
+        "shallowequal",
+        "react-is",
+        "react-compiler-runtime",
+        "lodash/startCase.js",
+      ],
+    },
   }
 })
