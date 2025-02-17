@@ -35,7 +35,7 @@ export const locate: DocumentLocationResolver = (params, context) => {
       `*[_id==$id || references($id)]
              { ${fields.map(field => `"${field}": ${field}`).join(', ')}}`,
       params,
-      { perspective: 'previewDrafts' },
+      { perspective: 'drafts' },
     ) as Observable<
       | {
         _type: string
