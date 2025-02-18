@@ -15,7 +15,7 @@
     "@astrojs/node": "^9.1.0",
     "@astrojs/prism": "^3.2.0",
     "@astrojs/react": "^4.2.0",
-    "@sanity/astro": "workspace:^",
+    "@sanity/astro": "^3.2.5",
     "@sanity/client": "^6.28.0",
     "@sanity/image-url": "^1.1.0",
     "@sanity/vision": "^3.75.1",
