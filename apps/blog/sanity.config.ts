@@ -6,8 +6,8 @@ import { defineDocuments, presentationTool } from 'sanity/presentation'
 import { media } from 'sanity-plugin-media'
 import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 
-import { schemaTypes } from "./schemas";
-import { locate } from './src/structure/locate.ts'
+import { schemaTypes } from "./schemas"
+import { resolve } from "./src/sanity/lib/resolve";
 
 export const projectId =
    import.meta.env.PUBLIC_SANITY_PROJECT_ID
@@ -29,16 +29,7 @@ export default defineConfig({
     presentationTool({
       previewUrl: SANITY_STUDIO_PREVIEW_URL,
       title: 'Presentation',
-      resolve:  {
-        // *todo* apparently non-functional as yet
-        mainDocuments: defineDocuments([
-          {
-            route: '/posts/:slug',
-            filter: `_type == "post" && slug.current == $slug`,
-          },
-        ]),
-        locations: locate,
-      },
+      resolve: resolve,
     }),
     media(),
     unsplashImageAsset(),

@@ -1,31 +1,51 @@
 ---
 import { formatDate } from "../utils";
 import SanityImage from "./SanityImage.astro";
+import Outline from "./Outline.astro";
 
 const { post } = Astro.props;
 ---
+<script>
+  // Purpose here is to remove the <a> link from Title when in Visual Editing,
+  // but not working properly, as it also removes the Title from VE action.
+  // If we don't use this, only the Title flags and any area in Card
+  // even without flag responds to VE clicks, but goes to Title.
+
+  // const isInIframe = window.self !== window.top;
+  // if (isInIframe) {
+  //   document.querySelectorAll('.removable-link').forEach(link => {
+  //     link.addEventListener('click', (e) => e.preventDefault());
+  //     link.style.pointerEvents = 'none';
+  //     link.style.cursor = 'default';
+  //     link.removeAttribute('href');
+  //   });
+  // }
+</script>
 
 <div class="card">
   {
     post.mainImage ? (
-        <div class="card__cover">
+      <div class="card__cover">
+        <Outline id={post._id} type={post._type} path="mainImage">
           <SanityImage
-              node={post.mainImage}
-              height="300"
-              width="500"
-              alt="Cover image"
-              shape="card__cover"
-              pt={false}
+            node={post.mainImage}
+            height="300"
+            width="500"
+            alt="Cover image"
+            shape="card__cover"
+            pt={false}
           />
-        </div>
+        </Outline>
+      </div>
     ) : (
-      <div class="card__cover--none" />
+      <div class="card__cover--none"/>
     )
   }
+
   <div class="card__container">
     <h3 class="card__title">
       <a
-        class="card__link"
+        class="card__link removable-link"
         href={`/posts/${post.slug.current}`}
       >
         {post.title}

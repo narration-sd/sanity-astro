@@ -33,7 +33,7 @@ export default defineConfig({
         studioUrl: env.PUBLIC_SANITY_STUDIO_PREVIEW_URL
             + env.PUBLIC_SANITY_STUDIO_BASE_PATH,
       },
-      studioBasePath: /*env.PUBLIC_SANITY_STUDIO_PREVIEW_URL +*/ env.PUBLIC_SANITY_STUDIO_BASE_PATH,
+      studioBasePath: /*env.PUBLIC_SANITY_STUDIO_PREVIEW_URL + */ env.PUBLIC_SANITY_STUDIO_BASE_PATH,
     }),
     react(),
   ],

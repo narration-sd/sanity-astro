@@ -8,10 +8,10 @@ export const prerender = false;
 const posts = await sanityClient.fetch(`*[_type == "post" ] | order(publishedAt desc)`);
 ---
 
-<Layout title="Welcome to Sanity Astro Presentation.">
+<Layout title="Welcome to Sanity Astro Presentation." live>
   <section>
     {posts.length
-      ? posts.map((post) => <Card post={post} />)
+      ? posts.map((post) => <Card key={post._id} post={post} />)
       : <Welcome />}
   </section>
 </Layout>
