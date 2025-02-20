@@ -39,10 +39,10 @@ export default defineConfig({
   ],
   vite: {
     resolve: {
-      alias: {
+      alias:  {
         lodash : 'lodash-es',
         // this next required workaround for Astro bug still present
-        "react-dom/server": "react-dom/server.edge",
+        ...import.meta.env.PROD && { "react-dom/server": "react-dom/server.edge" },
       }
     }
   },

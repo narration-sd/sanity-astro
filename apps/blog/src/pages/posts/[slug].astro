@@ -5,6 +5,7 @@ import PortableText from "../../components/PortableText.astro";
 import SanityImage from "../../components/SanityImage.astro";
 import Outline from "../../components/Outline.astro"
 import { formatDate } from "../../utils";
+import { CounterDemo } from "../../components/CounterDemo";
 
 // n.b. for future static or hybrid use, with published-only
 // page query filtering, which can also be dynamic to keep
@@ -54,6 +55,10 @@ const post = await sanityClient.fetch(
         <PortableText value={post.body}  />
       </div>
     </div>
+  </section>
+  <section>
+    <h2>React Island Counter Demo</h2>
+    <CounterDemo client:load />
   </section>
 </Layout>
 
