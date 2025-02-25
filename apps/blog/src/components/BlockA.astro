@@ -1,0 +1,7 @@
+---
+const { block } = Astro.props
+---
+<div>
+  <h2>Block type A</h2>
+  <h2>Post: {block.title}, Type: {block.postType ?? 'unset...'}</h2>
+</div>

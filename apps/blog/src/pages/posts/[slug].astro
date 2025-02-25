@@ -4,6 +4,8 @@ import Layout from "../../layouts/Layout.astro";
 import PortableText from "../../components/PortableText.astro";
 import SanityImage from "../../components/SanityImage.astro";
 import Outline from "../../components/Outline.astro"
+import BlockA from "../../components/BlockA.astro";
+import BlockB from "../../components/BlockB.astro";
 import { formatDate } from "../../utils";
 import { CounterDemo } from "../../components/CounterDemo";
 
@@ -26,6 +28,7 @@ const { slug } = Astro.params
 const post = await sanityClient.fetch(
   `*[_type == "post" && slug.current == $slug][0]  {
     ...,
+    "blocks": otherPosts[]->
   }`, {
     slug: Astro.params.slug,
   }
@@ -59,6 +62,22 @@ const post = await sanityClient.fetch(
   <section>
     <h2>React Island Counter Demo</h2>
     <CounterDemo client:load />
+  </section>
+  <section>
+    <div>
+      {
+        post.blocks?.map((block) => {
+          switch (block.postType) {
+            case "blockA":
+              return <BlockA block={block} />;
+            case "blockB":
+              return <BlockB block={block} />;
+            default:
+              return <h2>block without type: {block.postType}</h2>;
+          }
+        })
+      }
+    </div>
   </section>
 </Layout>
 

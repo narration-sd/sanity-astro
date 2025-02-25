@@ -10,12 +10,12 @@ import { defineType, defineArrayMember } from "sanity";
  *  }
  */
 export default defineType({
-  title: "Block Content",
+  title: "BlockA Content",
   name: "blockContent",
   type: "array",
   of: [
     defineArrayMember({
-      title: "Block",
+      title: "BlockA",
       type: "block",
       // Styles let you set what your user can mark up blocks with. These
       // correspond with HTML tags, but you can set any title or value

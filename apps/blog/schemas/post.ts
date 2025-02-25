@@ -38,6 +38,23 @@ export default defineType({
       title: "Body",
       type: "blockContent",
     }),
+    defineField ({
+      name: "postType",
+      title: "Post Type",
+      type: 'string',
+      options: {
+        list: [
+          {title: 'Type A', value: 'blockA'},
+          {title: 'Type B', value: 'blockB'}
+        ], // <-- predefined values
+      }
+    }),
+    defineField({
+      name: "otherPosts",
+      title: "Other Posts",
+      type: "array",
+      of: [{ type: 'reference', to: [{ type: 'post' }] }],
+    })
   ],
   preview: {
     select: {
