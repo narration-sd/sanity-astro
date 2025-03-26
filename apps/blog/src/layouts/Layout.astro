@@ -57,6 +57,19 @@ globalThis.live = live
 			</main>
 		</div>
 		{ live && <VisualEditing enabled={visualEditingEnabled} zIndex={1000} /> }
+		<script>
+			// n.b. this is a rather unusual approach, used because sanity-astro
+			// doesn't account for live conditioning of VisualEditing, and Astro's
+			// abilities don't include a way to directly condition its presence.
+			const container = document.querySelector('[component-export="VisualEditingComponent"]')
+
+			if (container) {
+				if (window.self === window.top) {
+					// we're not in iframe, thus Studio, so no VisualEditing after all.
+					container.remove()
+				}
+			}
+		</script>
 	</body>
 	<script>
 		// this anti-fouc arrangement can help smoothness, prevent skips with
