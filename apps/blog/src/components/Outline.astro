@@ -14,7 +14,7 @@ const attr = (path:string) => createDataAttribute({
 })
 ---
 
-<div class="tight-wrapx"  data-sanity={attr(path)} >
+<div class="tight-wrap"  data-sanity={attr(path)} >
   <slot />
 </div>
 
@@ -23,7 +23,7 @@ const attr = (path:string) => createDataAttribute({
     width: fit-content;
     height: fit-content;
   }
-/*  .tight-wrap img {
-    display: block; !* Remove extra spacing below the image *!
-  }*/
+  .tight-wrap img {
+    display: block; /* Remove extra spacing below the image */
+  }
 </style>
