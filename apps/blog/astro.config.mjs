@@ -1,6 +1,6 @@
 import sanityIntegration from "@sanity/astro";
 import { defineConfig } from "astro/config";
-import vercel from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel";
 import react from "@astrojs/react";
 import { loadEnv } from 'vite'
 
@@ -26,7 +26,7 @@ export default defineConfig({
       dataset: env.PUBLIC_SANITY_DATASET,
       apiVersion: env.PUBLIC_SANITY_API_VERSION,
       useCdn: false,
-      perspective: 'previewDrafts',
+      perspective: 'drafts',
       token: env.PUBLIC_SANITY_VIEWER_TOKEN,
       stega: {
         enabled:true,
