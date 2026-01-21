@@ -40,7 +40,7 @@ globalThis.live = live
 			rel="stylesheet"
 		/>
 
-		<title>{title}</title>
+		<title>bridge - {title}</title>
 	</head>
 	<body id="layout">
 
@@ -54,12 +54,13 @@ globalThis.live = live
 				>
 			</header>
 			<main>
-				<!-- script is bridge to allow Content Agent and Canvas -->
-				<script src="https://core.sanity-cdn.com/bridge.js" async type="module" is:inline></script>
 				<slot />
 			</main>
 		</div>
-		{ live && <VisualEditing enabled={visualEditingEnabled} zIndex={1000} /> }
+	<!-- script is bridge to allow Content Agent and Canvas -->
+	<script src="https://core.sanity-cdn.com/bridge.js" async type="module" is:inline></script>
+
+	{ live && <VisualEditing enabled={visualEditingEnabled} zIndex={1000} /> }
 		<script>
 			// n.b. this is a rather unusual approach, used because sanity-astro
 			// doesn't account for live conditioning of VisualEditing, and Astro's
