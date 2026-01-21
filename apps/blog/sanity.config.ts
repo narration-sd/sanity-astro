@@ -9,14 +9,18 @@ import { unsplashImageAsset } from 'sanity-plugin-asset-source-unsplash'
 import { schemaTypes } from "./schemas";
 import { resolve } from "./src/structure/resolve";
 
-export const projectId =
-   import.meta.env.PUBLIC_SANITY_PROJECT_ID
-export const dataset = import.meta.env.PUBLIC_SANITY_DATASET
-
-const SANITY_STUDIO_PREVIEW_URL = (
-  import.meta.env.PUBLIC_SANITY_STUDIO_PREVIEW_URL
-  || 'http://localhost:4321'
-)
+// n.b. What we're doing here is using js/ts optional chaining,
+// to select which import method to use for environmentals.
+// Using the wrong flavor will silently crash the studio, for
+// example, and note that the different naming prefixes must be
+// provided for in the .env file or deployment environmentals.
+const projectId = import.meta.env?.PUBLIC_SANITY_PROJECT_ID
+  || process.env.SANITY_STUDIO_PROJECT_ID
+const dataset = import.meta.env?.PUBLIC_SANITY_DATASET
+  || process.env.SANITY_STUDIO_DATASET
+const previewUrl =
+  import.meta.env?.PUBLIC_SANITY_STUDIO_PREVIEW_URL
+  || process.env.SANITY_STUDIO_PREVIEW_URL
 
 export default defineConfig({
   name: "sanity-astro",
@@ -27,7 +31,7 @@ export default defineConfig({
     structureTool(),
     visionTool(),
     presentationTool({
-      previewUrl: SANITY_STUDIO_PREVIEW_URL,
+      previewUrl: previewUrl,
       title: 'Presentation',
       resolve: resolve,
     }),
