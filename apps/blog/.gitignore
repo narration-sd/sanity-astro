@@ -3,6 +3,9 @@ dist/
 # generated types
 .astro/
 
+# specialty manifest
+studio/
+
 # dependencies
 node_modules/
 
