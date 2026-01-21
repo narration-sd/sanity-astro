@@ -44,8 +44,6 @@ globalThis.live = live
 	</head>
 	<body id="layout">
 
-	<script src="https://core.sanity-cdn.com/bridge.js" async type="module" is:inline></script>
-
 	<div class="container">
 			<!--<NewsBar client:only="react" />-->
 			<header class="header">
@@ -56,6 +54,8 @@ globalThis.live = live
 				>
 			</header>
 			<main>
+				<!-- script is bridge to allow Content Agent and Canvas -->
+				<script src="https://core.sanity-cdn.com/bridge.js" async type="module" is:inline></script>
 				<slot />
 			</main>
 		</div>
