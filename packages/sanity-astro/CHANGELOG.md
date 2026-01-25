@@ -5,6 +5,155 @@
 All notable changes to this project will be documented in this file. See
 [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [3.2.11](https://github.com/sanity-io/sanity-astro/compare/v3.2.10...v3.2.11) (2025-12-18)
+
+
+### Bug Fixes
+
+* **deps:** make peer dependencies include sanity 5.x ([#367](https://github.com/sanity-io/sanity-astro/issues/367)) ([ff9d136](https://github.com/sanity-io/sanity-astro/commit/ff9d13643ab3e20dea22817c0c518794bdb5b760))
+
+## [3.2.10](https://github.com/sanity-io/sanity-astro/compare/v3.2.9...v3.2.10) (2025-07-15)
+
+
+### Bug Fixes
+
+* **deps:** Update dependency @sanity/visual-editing to ^2.15.2 ([#360](https://github.com/sanity-io/sanity-astro/issues/360)) ([4adaa9b](https://github.com/sanity-io/sanity-astro/commit/4adaa9b0db6d50311e8c15065bccb1a6dd7e0baf))
+* **deps:** update dependency styled-components to ^6.1.19 ([#359](https://github.com/sanity-io/sanity-astro/issues/359)) ([43bb365](https://github.com/sanity-io/sanity-astro/commit/43bb3653facaed42aa0d9abe12e29f614a520de8))
+
+## [3.2.9](https://github.com/sanity-io/sanity-astro/compare/v3.2.8...v3.2.9) (2025-07-15)
+
+
+### Bug Fixes
+
+* allow sanity v4 in peer deps ([#357](https://github.com/sanity-io/sanity-astro/issues/357)) ([1215f58](https://github.com/sanity-io/sanity-astro/commit/1215f582aa6c7901411e86a3b4dd3af4d0b48aa0))
+
+## [3.2.8](https://github.com/sanity-io/sanity-astro/compare/v3.2.7...v3.2.8) (2025-07-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sanity/client to ^7.6.0 ([#353](https://github.com/sanity-io/sanity-astro/issues/353)) ([f73f7b8](https://github.com/sanity-io/sanity-astro/commit/f73f7b84ae89d7889b8f53b7ac1e23c3dffe93ff))
+
+## [3.2.7](https://github.com/sanity-io/sanity-astro/compare/v3.2.6...v3.2.7) (2025-07-14)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sanity/client to v7 ([#345](https://github.com/sanity-io/sanity-astro/issues/345)) ([f93bb2b](https://github.com/sanity-io/sanity-astro/commit/f93bb2b271b6bd59a92520c0d29d768d818b2245))
+* **deps:** Update dependency @sanity/visual-editing to ^2.14.0 ([#341](https://github.com/sanity-io/sanity-astro/issues/341)) ([c20b296](https://github.com/sanity-io/sanity-astro/commit/c20b29631b97d9160846b44dc8f995cb7f5b8906))
+* **deps:** update dependency sanity to ^3.90.0 ([#342](https://github.com/sanity-io/sanity-astro/issues/342)) ([62f8f68](https://github.com/sanity-io/sanity-astro/commit/62f8f684795e31b4fdbc2c5d49a7a4890b1d11ba))
+
+## [3.2.6](https://github.com/sanity-io/sanity-astro/compare/v3.2.5...v3.2.6) (2025-03-03)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sanity/client to ^6.28.2 ([#318](https://github.com/sanity-io/sanity-astro/issues/318)) ([499fc40](https://github.com/sanity-io/sanity-astro/commit/499fc40deea4ed32ac04f9ff32b26b864c410576))
+* **deps:** Update dependency @sanity/visual-editing to ^2.13.7 ([#317](https://github.com/sanity-io/sanity-astro/issues/317)) ([c3acec9](https://github.com/sanity-io/sanity-astro/commit/c3acec93b6dcd5607a834d399e2faf39095b433e))
+* **deps:** update dependency sanity to ^3.77.2 ([#319](https://github.com/sanity-io/sanity-astro/issues/319)) ([a8ca00d](https://github.com/sanity-io/sanity-astro/commit/a8ca00dd19d438828b7e10f6231773908013d553))
+
+## [3.2.5](https://github.com/sanity-io/sanity-astro/compare/v3.2.4...v3.2.5) (2025-02-18)
+
+
+### Bug Fixes
+
+* make styled-components a peer ([#310](https://github.com/sanity-io/sanity-astro/issues/310)) ([f5cbec0](https://github.com/sanity-io/sanity-astro/commit/f5cbec0d2966afd893087b8f681a29aeec31a8e9))
+
+## [3.2.4](https://github.com/sanity-io/sanity-astro/compare/v3.2.3...v3.2.4) (2025-02-18)
+
+
+### Bug Fixes
+
+* optimize `shallowequal` instead of `styled-components` ([e8684ae](https://github.com/sanity-io/sanity-astro/commit/e8684ae3c6b4734f547b6d6451547c195e087d15))
+
+## [3.2.3](https://github.com/sanity-io/sanity-astro/compare/v3.2.2...v3.2.3) (2025-02-18)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sanity/visual-editing to ^2.13.4 ([#304](https://github.com/sanity-io/sanity-astro/issues/304)) ([462ed73](https://github.com/sanity-io/sanity-astro/commit/462ed738c17df445fa637f63f536316b0479a1eb))
+* **deps:** update dependency sanity to ^3.76.1 ([#306](https://github.com/sanity-io/sanity-astro/issues/306)) ([95e2705](https://github.com/sanity-io/sanity-astro/commit/95e2705489af3f4f76c2a590d82acb201cee5557))
+* make visual editing a direct dependency ([#308](https://github.com/sanity-io/sanity-astro/issues/308)) ([0ccae9f](https://github.com/sanity-io/sanity-astro/commit/0ccae9f44677b2d763cdbf4e094de9354c52f8fd))
+
+## [3.2.2](https://github.com/sanity-io/sanity-astro/compare/v3.2.1...v3.2.2) (2025-02-18)
+
+
+### Bug Fixes
+
+* configure vite to optimize deps ([#301](https://github.com/sanity-io/sanity-astro/issues/301)) ([4d03ebf](https://github.com/sanity-io/sanity-astro/commit/4d03ebf0f774a5b578dd44ee0a055303948271db))
+* **deps:** update dependency @sanity/client to ^6.28.0 ([#293](https://github.com/sanity-io/sanity-astro/issues/293)) ([9cdb8a5](https://github.com/sanity-io/sanity-astro/commit/9cdb8a552c5c39e7c46bc6354c3489536113d38b))
+* **deps:** update dependency @sanity/visual-editing to ^2.13.3 ([#297](https://github.com/sanity-io/sanity-astro/issues/297)) ([5bf3296](https://github.com/sanity-io/sanity-astro/commit/5bf329657bf832d13cc53ed69d9e980fddb5bf72))
+* **deps:** update dependency sanity to ^3.75.1 ([#298](https://github.com/sanity-io/sanity-astro/issues/298)) ([22baeec](https://github.com/sanity-io/sanity-astro/commit/22baeec8911a35c3dc17b9243cb45470956a478e))
+
+## [3.2.1](https://github.com/sanity-io/sanity-astro/compare/v3.2.0...v3.2.1) (2025-02-12)
+
+
+### Bug Fixes
+
+* **deps:** update dependency @sanity/visual-editing to ^2.13.1 ([#286](https://github.com/sanity-io/sanity-astro/issues/286)) ([df4639a](https://github.com/sanity-io/sanity-astro/commit/df4639a4df2e891c681f1a541b5bb551673e8f75))
+* **deps:** update dependency @sanity/visual-editing to ^2.13.2 ([#292](https://github.com/sanity-io/sanity-astro/issues/292)) ([77bb3c4](https://github.com/sanity-io/sanity-astro/commit/77bb3c48218781beae9e90ec3da76f8b17585f7d))
+* **deps:** update dependency sanity to ^3.75.0 ([#287](https://github.com/sanity-io/sanity-astro/issues/287)) ([305b696](https://github.com/sanity-io/sanity-astro/commit/305b696e4513d6a5f7cb5fc34f3c374424b2339f))
+
+## [3.2.0](https://github.com/sanity-io/sanity-astro/compare/v3.1.11...v3.2.0) (2025-01-31)
+
+
+### Features
+
+* support embedding studios without ssr ([#275](https://github.com/sanity-io/sanity-astro/issues/275)) ([b1dd953](https://github.com/sanity-io/sanity-astro/commit/b1dd9536a6d778f6898e76a438985c414087222f))
+
+## [3.1.11](https://github.com/sanity-io/sanity-astro/compare/v3.1.10...v3.1.11) (2025-01-29)
+
+
+### Bug Fixes
+
+* bump license year ([3b87490](https://github.com/sanity-io/sanity-astro/commit/3b87490bb250e5e1b0253e89d02c37b19d475e39))
+* **deps:** update dependency @sanity/client to ^6.27.2 ([#271](https://github.com/sanity-io/sanity-astro/issues/271)) ([5560c81](https://github.com/sanity-io/sanity-astro/commit/5560c816046058f51c6def4cb298d532ca12d9d3))
+* **deps:** update dependency @sanity/visual-editing to ^2.12.10 ([#270](https://github.com/sanity-io/sanity-astro/issues/270)) ([6cdd08c](https://github.com/sanity-io/sanity-astro/commit/6cdd08c2e923a404e995003b02be3eb61d7368df))
+* **deps:** update dependency sanity to ^3.72.1 ([#272](https://github.com/sanity-io/sanity-astro/issues/272)) ([d2b6890](https://github.com/sanity-io/sanity-astro/commit/d2b6890323cf5817397a3cbb1b87f5f437a773f5))
+* **deps:** update dependency type-fest to ^4.33.0 ([#246](https://github.com/sanity-io/sanity-astro/issues/246)) ([06985bb](https://github.com/sanity-io/sanity-astro/commit/06985bb10b174014efd63471e8bcafda323b8c8d))
+
+## [3.1.10](https://github.com/sanity-io/sanity-astro/compare/v3.1.9...v3.1.10) (2025-01-14)
+
+
+### Bug Fixes
+
+* bump visual editing to 2.12.2 to fix refresh connectivity ([#238](https://github.com/sanity-io/sanity-astro/issues/238)) ([3233c60](https://github.com/sanity-io/sanity-astro/commit/3233c60a1264c079a7f1973c809afe20cf39fbe9))
+
+## [3.1.9](https://github.com/sanity-io/sanity-astro/compare/v3.1.8...v3.1.9) (2024-12-18)
+
+
+### Bug Fixes
+
+* bump react peer ([#233](https://github.com/sanity-io/sanity-astro/issues/233)) ([debdfbe](https://github.com/sanity-io/sanity-astro/commit/debdfbe20f4f430abbb90028ccfca74d39aa500b))
+
+## [3.1.8](https://github.com/sanity-io/sanity-astro/compare/v3.1.7...v3.1.8) (2024-12-12)
+
+
+### Bug Fixes
+
+* **deps:** upgrade `@sanity/visual-editing` to `2.10.7` ([7af0441](https://github.com/sanity-io/sanity-astro/commit/7af0441f47b78359af165525dddd76053f96f633))
+
+## [3.1.7](https://github.com/sanity-io/sanity-astro/compare/v3.1.6...v3.1.7) (2024-12-12)
+
+
+### Bug Fixes
+
+* bump `sanity` and `@sanity/visual-editing` to `latest` ([#220](https://github.com/sanity-io/sanity-astro/issues/220)) ([a1274ea](https://github.com/sanity-io/sanity-astro/commit/a1274ea9e171d156d5b6bff7ab49a8fe299e30f1))
+
+## [3.1.6](https://github.com/sanity-io/sanity-astro/compare/v3.1.5...v3.1.6) (2024-08-29)
+
+
+### Bug Fixes
+
+* error out if studioBasePath looks like an absolute URL ([#211](https://github.com/sanity-io/sanity-astro/issues/211)) ([9dc8b72](https://github.com/sanity-io/sanity-astro/commit/9dc8b72792646c8d1f0f4af1e15bb3c3a9fa5e5a))
+
+## [3.1.5](https://github.com/sanity-io/sanity-astro/compare/v3.1.4...v3.1.5) (2024-08-27)
+
+
+### Bug Fixes
+
+* allow integration options to be undefined ([#213](https://github.com/sanity-io/sanity-astro/issues/213)) ([0e8924b](https://github.com/sanity-io/sanity-astro/commit/0e8924bcdf2097efebb0d20edadb5a7db9d59b9c))
+
 ## [3.1.4](https://github.com/sanity-io/sanity-astro/compare/v3.1.3...v3.1.4) (2024-06-19)
 
 
