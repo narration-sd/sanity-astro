@@ -30,7 +30,8 @@ export type ResolvedRefreshStrategy = {type: 'reload'; followUpDelayMs: number |
 export function resolveRefreshStrategy(
   strategy: RefreshStrategy | undefined,
 ): ResolvedRefreshStrategy {
-  if (strategy === undefined || strategy === 'reload') {
+  // So far, we only handle the 'reload' strategy type, or none provided
+  if (!strategy || typeof strategy !== 'object' || strategy.type !== 'reload') {
     return {type: 'reload', followUpDelayMs: undefined}
   }
   const {followUpDelayMs} = strategy
